@@ -2,12 +2,30 @@ import java.util.ArrayList;
 
 public class Usuario
 {
-    String nome;
-    String login;
-    String senha;
-    String cargo;
-    ArrayList<Projeto> projetosIncluidos;
-    ArrayList<Atividade> atividadesIncluidos;
+    private String nome;
+    private String login;
+    private String senha;
+    private String cargo;
+    private ArrayList<Projeto> projetosIncluidos;
+    private ArrayList<Atividade> atividadesIncluidos;
+    private String universidade;
+    private boolean habilitadoParaCoordenador;
+
+    public String getUniversidade() {
+        return universidade;
+    }
+
+    public boolean gethabilitadoParaCoordenador()
+    {
+        return habilitadoParaCoordenador;
+    }
+
+    
+
+    public void sethabilitadoParaCoordenador(boolean habilitadoParaCoordenador)
+    {
+        this.habilitadoParaCoordenador = habilitadoParaCoordenador;
+    }
 
     public String getCargo()
     {
@@ -35,6 +53,10 @@ public class Usuario
 
     public ArrayList<Projeto> getProjetosIncluidos() {
         return projetosIncluidos;
+    }
+
+    public void setUniversidade(String universidade) {
+        this.universidade = universidade;
     }
 
     public void setCargo(String cargo)
@@ -72,7 +94,7 @@ public class Usuario
         {
             if(usuario.login.equals(unica) == true)
             {
-                
+                return true;
             }    
         }
         return false;

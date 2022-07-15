@@ -1,7 +1,5 @@
 
-public class Projeto
+public class Projeto extends CorpoProjetoAtividade
 {
-    String identificacao;
-    String descricao;
-    Usuario
+    
 }
